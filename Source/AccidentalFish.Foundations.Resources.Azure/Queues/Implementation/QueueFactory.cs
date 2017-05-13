@@ -22,13 +22,13 @@ namespace AccidentalFish.Foundations.Resources.Azure.Queues.Implementation
 
         public IAsyncQueue<T> CreateAsyncQueue<T>(string queueName) where T : class
         {
-            string connectionString = _connectionStringProvider.Get<AsyncQueue<T>>(queueName);
+            string connectionString = _connectionStringProvider.Get<IAsyncQueue<T>>(queueName);
             return new AsyncQueue<T>(_queueSerializer, connectionString, queueName, _loggerFactory.CreateLogger<AsyncQueue<T>>());
         }
 
         public IAsyncQueue<T> CreateAsyncQueue<T>(string queueName, IQueueSerializer queueSerializer) where T : class
         {
-            string connectionString = _connectionStringProvider.Get<AsyncQueue<T>>(queueName);
+            string connectionString = _connectionStringProvider.Get<IAsyncQueue<T>>(queueName);
             return new AsyncQueue<T>(queueSerializer, connectionString, queueName, _loggerFactory.CreateLogger<AsyncQueue<T>>());
         }        
 

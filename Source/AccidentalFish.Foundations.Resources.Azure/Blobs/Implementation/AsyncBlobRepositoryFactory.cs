@@ -19,7 +19,7 @@ namespace AccidentalFish.Foundations.Resources.Azure.Blobs.Implementation
 
         public async Task<IAsyncBlockBlobRepository> CreateAsyncBlockBlobRepositoryAsync(string containerName)
         {
-            return new AsyncBlockBlobRepository(await _connectionStringProvider.GetAsync<IAsyncBlobRepositoryFactory>(containerName), containerName, _loggerFactory);
+            return new AsyncBlockBlobRepository(await _connectionStringProvider.GetAsync<IAsyncBlockBlobRepository>(containerName), containerName, _loggerFactory);
         }
     }
 }
