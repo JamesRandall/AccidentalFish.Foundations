@@ -25,23 +25,6 @@ namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
         Task<IAsyncQueue<T>> CreateAsyncQueueAsync<T>(string queueName, IQueueSerializer queueSerializer) where T : class;
 
         /// <summary>
-        /// Create an queue with the given name with a connection string as specified in an app setting of azure-storage-connection-string
-        /// </summary>
-        /// <typeparam name="T">The type of the queue items</typeparam>
-        /// <param name="queueName">The name of the queue</param>
-        /// <returns>A configured queue</returns>
-        Task<IQueue<T>> CreateQueueAsync<T>(string queueName) where T : class;
-
-        /// <summary>
-        /// Create an queue with the given name with a connection string as specified in an app setting of azure-storage-connection-string
-        /// </summary>
-        /// <typeparam name="T">The type of the queue items</typeparam>
-        /// <param name="queueName">The name of the queue</param>
-        /// <param name="queueSerializer">Serializer for the queue items</param>
-        /// <returns>A configured queue</returns>
-        Task<IQueue<T>> CreateQueueAsync<T>(string queueName, IQueueSerializer queueSerializer) where T : class;
-
-        /// <summary>
         /// Create an asynchronous topic with the given name with a connection string as specified in an app setting of azure-storage-connection-string
         /// </summary>
         /// <typeparam name="T">The type of the topic items</typeparam>
