@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Resources.Abstractions", "AccidentalFish.Foundations.Core\AccidentalFish.Foundations.Resources.Abstractions.csproj", "{1018D578-3E3E-40BC-AEA1-20D76985BAEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Resources.Abstractions", "Source\AccidentalFish.Foundations.Core\AccidentalFish.Foundations.Resources.Abstractions.csproj", "{1018D578-3E3E-40BC-AEA1-20D76985BAEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Policies", "AccidentalFish.Foundations.Policies\AccidentalFish.Foundations.Policies.csproj", "{505AFD05-906F-476C-B93E-4FF5D48B8D33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Policies", "Source\AccidentalFish.Foundations.Policies\AccidentalFish.Foundations.Policies.csproj", "{505AFD05-906F-476C-B93E-4FF5D48B8D33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Threading", "AccidentalFish.Foundations.Threading\AccidentalFish.Foundations.Threading.csproj", "{42813381-1C4F-4988-8802-8399D92335FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Threading", "Source\AccidentalFish.Foundations.Threading\AccidentalFish.Foundations.Threading.csproj", "{42813381-1C4F-4988-8802-8399D92335FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Runtime", "AccidentalFish.Foundations.Runtime\AccidentalFish.Foundations.Runtime.csproj", "{1CF9CD2B-3635-4380-AF98-94FC8E81B5A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Runtime", "Source\AccidentalFish.Foundations.Runtime\AccidentalFish.Foundations.Runtime.csproj", "{1CF9CD2B-3635-4380-AF98-94FC8E81B5A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Runtime.HostableComponents", "AccidentalFish.Foundations.Runtime.HostableComponents\AccidentalFish.Foundations.Runtime.HostableComponents.csproj", "{163E53E1-1B17-4F0B-934A-7675E40EA20D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Runtime.HostableComponents", "Source\AccidentalFish.Foundations.Runtime.HostableComponents\AccidentalFish.Foundations.Runtime.HostableComponents.csproj", "{163E53E1-1B17-4F0B-934A-7675E40EA20D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
