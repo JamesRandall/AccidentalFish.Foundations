@@ -1,7 +1,9 @@
-﻿using AccidentalFish.DependencyResolver;
+﻿using AccidentalFish.ApplicationSupport.Policies;
+using AccidentalFish.DependencyResolver;
 using AccidentalFish.Foundations.Resources.Abstractions.Blobs;
 using AccidentalFish.Foundations.Resources.Abstractions.Queues;
 using AccidentalFish.Foundations.Resources.Azure.Blobs.Implementation;
+using AccidentalFish.Foundations.Resources.Azure.Policies;
 using AccidentalFish.Foundations.Resources.Azure.Queues;
 using AccidentalFish.Foundations.Resources.Azure.Queues.Implementation;
 using AccidentalFish.Foundations.Resources.Azure.TableStorage;
@@ -30,6 +32,9 @@ namespace AccidentalFish.Foundations.Resources.Azure
             resolver.Register<ITableStorageQueryBuilder, TableStorageQueryBuilder>();
             resolver.Register<ITableContinuationTokenSerializer, TableContinuationTokenSerializer>();
             resolver.Register<ITableStorageConcurrencyManager, TableStorageConcurrencyManager>();
+
+            // policies
+            resolver.Register<ILeaseManagerFactory, LeaseManagerFactory>();
 
             return resolver;
         }
