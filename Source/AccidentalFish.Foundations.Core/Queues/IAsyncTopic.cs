@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     /// <summary>
     /// Post items on a topic

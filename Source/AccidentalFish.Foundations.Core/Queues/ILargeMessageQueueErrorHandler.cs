@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     /// <summary>
     /// Allows errors to be handeld when errors occur within large message blob handling to enable the reference queue item

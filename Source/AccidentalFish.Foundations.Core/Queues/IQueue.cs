@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     /// <summary>
     /// Basic queue interface. This non-async version is likely to be deprecated.

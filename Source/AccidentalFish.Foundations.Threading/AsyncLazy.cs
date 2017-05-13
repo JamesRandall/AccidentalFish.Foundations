@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Threading
+namespace AccidentalFish.Foundations.Threading
 {
     /// <summary>
     /// Provides support for asynchronous lazy initialization. This type is fully threadsafe.

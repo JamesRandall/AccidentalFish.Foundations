@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using AccidentalFish.ApplicationSupport.Policies;
 
-namespace AccidentalFish.ApplicationSupport.Policies.Implementation
+namespace AccidentalFish.Foundations.Policies.Implementation
 {
     internal class AsyncRegularTimer : IAsyncRegularTimer
     {

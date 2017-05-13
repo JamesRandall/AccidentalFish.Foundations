@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     /// <summary>
     /// Intetrface for processing subscriptions

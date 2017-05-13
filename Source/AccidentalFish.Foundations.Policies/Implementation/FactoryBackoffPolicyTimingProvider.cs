@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using AccidentalFish.ApplicationSupport.Policies;
 
-namespace AccidentalFish.ApplicationSupport.Policies.Implementation
+namespace AccidentalFish.Foundations.Policies.Implementation
 {
     class FactoryBackoffPolicyTimingProvider : IBackoffPolicyTimingProvider
     {

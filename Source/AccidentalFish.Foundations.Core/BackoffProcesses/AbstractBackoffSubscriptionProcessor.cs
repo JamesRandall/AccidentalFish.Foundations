@@ -2,10 +2,10 @@
 using System.Threading;
 using System.Threading.Tasks;
 using AccidentalFish.ApplicationSupport.Policies;
-using AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues;
+using AccidentalFish.Foundations.Resources.Abstractions.Queues;
 using Microsoft.Extensions.Logging;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProcesses
+namespace AccidentalFish.Foundations.Resources.Abstractions.BackoffProcesses
 {
     /// <summary>
     /// Base hostable component for processing items on a subscription falling away into a backoff pattern when no queue items are available.
@@ -13,11 +13,11 @@ namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProces
     /// and the subscription to the constructor.
     /// </summary>
     /// <typeparam name="T">The type of the queue item</typeparam>
-    public abstract class BackoffSubscriptionProcessor<T> where T : class
+    public abstract class AbstractBackoffSubscriptionProcessor<T> where T : class
     {
         private readonly IAsyncBackoffPolicy _backoffPolicy;
         private readonly IAsyncSubscription<T> _subscription;
-        private readonly ILogger<BackoffSubscriptionProcessor<T>> _logger;
+        private readonly ILogger<AbstractBackoffSubscriptionProcessor<T>> _logger;
 
         private class ProcessResult
         {
@@ -31,7 +31,7 @@ namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProces
         /// </summary>
         /// <param name="backoffPolicy">The back off policy to use.</param>
         /// <param name="subscription">The subscription to be processed</param>
-        protected BackoffSubscriptionProcessor(
+        protected AbstractBackoffSubscriptionProcessor(
             IAsyncBackoffPolicy backoffPolicy,
             IAsyncSubscription<T> subscription) : this(backoffPolicy, subscription, null)
         {
@@ -44,10 +44,10 @@ namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProces
         /// <param name="backoffPolicy">The back off policy to use.</param>
         /// <param name="subscription">The suubscription to be processed</param>
         /// <param name="logger">The logger to use for reporting issues</param>
-        protected BackoffSubscriptionProcessor(
+        protected AbstractBackoffSubscriptionProcessor(
             IAsyncBackoffPolicy backoffPolicy,
             IAsyncSubscription<T> subscription,
-            ILogger<BackoffSubscriptionProcessor<T>> logger)
+            ILogger<AbstractBackoffSubscriptionProcessor<T>> logger)
         {
             _backoffPolicy = backoffPolicy;
             _subscription = subscription;
@@ -78,9 +78,9 @@ namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProces
         /// <returns>Awaitable task</returns>
         public async Task StartAsync(CancellationToken token)
         {
-            Logger?.LogTrace("Starting BackoffSubscriptionProcessor for type {TYPE}", typeof(T).FullName);
+            Logger?.LogTrace("Starting AbstractBackoffSubscriptionProcessor for type {TYPE}", typeof(T).FullName);
             await _backoffPolicy.ExecuteAsync(AttemptDequeue, token);
-            Logger?.LogTrace("Exiting BackoffSubscriptionProcessor for type {TYPE}", typeof(T).FullName);
+            Logger?.LogTrace("Exiting AbstractBackoffSubscriptionProcessor for type {TYPE}", typeof(T).FullName);
         }
 
         private async Task<bool> AttemptDequeue()

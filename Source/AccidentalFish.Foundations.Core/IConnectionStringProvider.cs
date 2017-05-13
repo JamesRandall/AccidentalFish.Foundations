@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Runtime
+namespace AccidentalFish.Foundations.Resources.Abstractions
 {
-    interface IConnectionStringProvider
+    public interface IConnectionStringProvider
     {
         Task<string> GetAsync<TFactory>(string resourceName);
 

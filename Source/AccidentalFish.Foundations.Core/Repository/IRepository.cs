@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Repository
+namespace AccidentalFish.Foundations.Resources.Abstractions.Repository
 {
     /// <summary>
     /// Repository pattern for use with an ORM

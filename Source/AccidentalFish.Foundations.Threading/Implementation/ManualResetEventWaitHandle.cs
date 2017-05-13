@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace AccidentalFish.ApplicationSupport.Threading.Implementation
+namespace AccidentalFish.Foundations.Threading.Implementation
 {
     class ManualResetEventWaitHandle : IWaitHandle, IDisposable
     {

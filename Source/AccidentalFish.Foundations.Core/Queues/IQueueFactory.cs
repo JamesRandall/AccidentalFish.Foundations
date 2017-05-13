@@ -1,4 +1,4 @@
-﻿namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+﻿namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     /// <summary>
     /// Factory for creating configured queues

@@ -1,12 +1,12 @@
 ﻿using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Runtime.Implementation
+namespace AccidentalFish.Foundations.Resources.Abstractions.Implementation
 {
-    internal class ConnectionStringProvider : IConnectionStringProvider
+    internal class BasicConnectionStringProvider : IConnectionStringProvider
     {
         private readonly string _connectionString;
 
-        public ConnectionStringProvider(string connectionString)
+        public BasicConnectionStringProvider(string connectionString)
         {
             _connectionString = connectionString;
         }

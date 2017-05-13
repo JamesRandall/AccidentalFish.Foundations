@@ -1,4 +1,4 @@
-﻿namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Repository
+﻿namespace AccidentalFish.Foundations.Resources.Abstractions.Repository
 {
     /// <summary>
     /// Provides unit of work factories that are configured with a given database context and connection string

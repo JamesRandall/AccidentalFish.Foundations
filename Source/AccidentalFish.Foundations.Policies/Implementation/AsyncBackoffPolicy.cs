@@ -2,9 +2,10 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using AccidentalFish.ApplicationSupport.Policies;
 using Microsoft.Extensions.Logging;
 
-namespace AccidentalFish.ApplicationSupport.Policies.Implementation
+namespace AccidentalFish.Foundations.Policies.Implementation
 {
     internal class AsyncBackoffPolicy : IAsyncBackoffPolicy
     {

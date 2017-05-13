@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AccidentalFish.ApplicationSupport.Threading
+namespace AccidentalFish.Foundations.Threading
 {
     /// <summary>
     /// Wrapper for a threading wait handle. Supplied implementation wraps a manual reset event.

@@ -1,18 +1,17 @@
 ﻿using AccidentalFish.ApplicationSupport.Policies;
-using AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProcesses;
-using AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues;
-using AccidentalFish.ApplicationSupport.Resources.Abstractions.Runtime;
+using AccidentalFish.Foundations.Resources.Abstractions.BackoffProcesses;
+using AccidentalFish.Foundations.Resources.Abstractions.Queues;
 using Microsoft.Extensions.Logging;
 
-namespace AccidentalFish.ApplicationSupport.Runtime.HostableComponents
+namespace AccidentalFish.Foundations.Runtime.HostableComponents
 {
-    public abstract class HostableBackoffSubscriptionProcessor<T> : BackoffSubscriptionProcessor<T>, IHostableComponent where T : class
+    public abstract class HostableBackoffSubscriptionProcessor<T> : AbstractBackoffSubscriptionProcessor<T>, IHostableComponent where T : class
     {
         public HostableBackoffSubscriptionProcessor(IAsyncBackoffPolicy backoffPolicy, IAsyncSubscription<T> subscription) : base(backoffPolicy, subscription)
         {
         }
 
-        public HostableBackoffSubscriptionProcessor(IAsyncBackoffPolicy backoffPolicy, IAsyncSubscription<T> subscription, ILogger<BackoffSubscriptionProcessor<T>> logger) : base(backoffPolicy, subscription, logger)
+        public HostableBackoffSubscriptionProcessor(IAsyncBackoffPolicy backoffPolicy, IAsyncSubscription<T> subscription, ILogger<AbstractBackoffSubscriptionProcessor<T>> logger) : base(backoffPolicy, subscription, logger)
         {
         }
     }

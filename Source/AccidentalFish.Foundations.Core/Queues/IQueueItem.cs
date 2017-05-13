@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     /// <summary>
     /// Wrapper for a queued item

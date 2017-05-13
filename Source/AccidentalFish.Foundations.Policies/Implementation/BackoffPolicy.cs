@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-using AccidentalFish.ApplicationSupport.Threading;
+using AccidentalFish.ApplicationSupport.Policies;
+using AccidentalFish.Foundations.Threading;
 using Microsoft.Extensions.Logging;
 
-namespace AccidentalFish.ApplicationSupport.Policies.Implementation
+namespace AccidentalFish.Foundations.Policies.Implementation
 {
     internal class BackoffPolicy : IBackoffPolicy
     {

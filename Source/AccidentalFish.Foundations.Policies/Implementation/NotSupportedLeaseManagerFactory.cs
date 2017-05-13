@@ -1,6 +1,7 @@
 ﻿using System;
+using AccidentalFish.ApplicationSupport.Policies;
 
-namespace AccidentalFish.ApplicationSupport.Policies.Implementation
+namespace AccidentalFish.Foundations.Policies.Implementation
 {
     internal class NotSupportedLeaseManagerFactory : ILeaseManagerFactory
     {

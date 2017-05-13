@@ -1,6 +1,6 @@
-﻿using AccidentalFish.ApplicationSupport.Resources.Abstractions.Blobs;
+﻿using AccidentalFish.Foundations.Resources.Abstractions.Blobs;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     /// <summary>
     /// A large message queue combines a blob store and a queue (with references to the blobs) to allow for the queueing

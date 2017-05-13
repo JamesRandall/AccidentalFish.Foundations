@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Runtime.Implementation
+namespace AccidentalFish.Foundations.Runtime.Implementation
 {
     internal class ComponentHost : IComponentHost
     {

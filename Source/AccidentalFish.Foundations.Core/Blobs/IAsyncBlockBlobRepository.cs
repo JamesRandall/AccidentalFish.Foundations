@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Blobs
+namespace AccidentalFish.Foundations.Resources.Abstractions.Blobs
 {
     /// <summary>
     /// Class for storing and accessing blob files

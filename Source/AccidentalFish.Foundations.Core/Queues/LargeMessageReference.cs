@@ -1,4 +1,4 @@
-﻿namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+﻿namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     /// <summary>
     /// Used by the ILargeMessageQueueFactory and underlying queue to provide a reference to a blob containing the

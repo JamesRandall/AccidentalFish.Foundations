@@ -1,7 +1,7 @@
-﻿using AccidentalFish.ApplicationSupport.Resources.Abstractions.Blobs;
+﻿using AccidentalFish.Foundations.Resources.Abstractions.Blobs;
 using Microsoft.Extensions.Logging;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues.Implementation
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues.Implementation
 {
     internal class LargeMessageQueueFactory : ILargeMessageQueueFactory
     {

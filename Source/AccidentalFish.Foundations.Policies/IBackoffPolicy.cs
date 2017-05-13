@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-using AccidentalFish.ApplicationSupport.Threading;
+using AccidentalFish.Foundations.Threading;
 
 namespace AccidentalFish.ApplicationSupport.Policies
 {

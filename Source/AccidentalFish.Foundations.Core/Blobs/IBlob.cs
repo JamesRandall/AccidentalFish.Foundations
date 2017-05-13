@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Blobs
+namespace AccidentalFish.Foundations.Resources.Abstractions.Blobs
 {
     /// <summary>
     /// A reference to a blob
@@ -35,7 +35,7 @@ namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Blobs
         /// Gets a stream that can be used to write the blob to
         /// </summary>
         /// <returns>A writable stream</returns>
-        Stream GetUploadStream();
+        Task<Stream> GetUploadStreamAsync();
         /// <summary>
         /// Uploads the blob from the byte array
         /// </summary>
@@ -47,18 +47,7 @@ namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Blobs
         /// </summary>
         /// <param name="stream">A stream from which the blob can be read</param>
         /// <returns>An awaitable task</returns>
-        Task UploadStreamAsync(Stream stream);
-        /// <summary>
-        /// Download the blob as a UTF8 string
-        /// </summary>
-        /// <returns>A string containing the blob</returns>
-        string DownloadString();
-        /// <summary>
-        /// Download the blob as a string using the specified encoding
-        /// </summary>
-        /// <param name="encoding">The encoding to use for the string</param>
-        /// <returns>A string containing the blob</returns>
-        string DownloadString(Encoding encoding);
+        Task UploadStreamAsync(Stream stream);        
         /// <summary>
         /// Deletes the blob
         /// </summary>

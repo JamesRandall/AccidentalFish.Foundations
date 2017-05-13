@@ -5,12 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Queues\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AccidentalFish.DependencyResolver" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="1.1.2" />
+    <PackageReference Include="WindowsAzure.Storage" Version="8.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AccidentalFish.Foundations.Core\AccidentalFish.Foundations.Resources.Abstractions.csproj" />
-    <ProjectReference Include="..\AccidentalFish.Foundations.Runtime\AccidentalFish.Foundations.Runtime.csproj" />
   </ItemGroup>
 
 </Project>

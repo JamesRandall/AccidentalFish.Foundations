@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using AccidentalFish.ApplicationSupport.Policies;
 
-namespace AccidentalFish.ApplicationSupport.Policies.Implementation
+namespace AccidentalFish.Foundations.Policies.Implementation
 {
     internal class BackoffPolicyDefaultTimingProvider : IBackoffPolicyTimingProvider
     {

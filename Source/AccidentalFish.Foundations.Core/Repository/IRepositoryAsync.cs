@@ -3,7 +3,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Repository
+namespace AccidentalFish.Foundations.Resources.Abstractions.Repository
 {
     /// <summary>
     /// Repository pattern for use with an ORM that supports asynchronous access

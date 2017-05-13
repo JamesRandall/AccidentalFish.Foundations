@@ -1,4 +1,4 @@
-﻿namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+﻿namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     /// <summary>
     /// Serializes and deserializes objects to and from strings for placing on a queue

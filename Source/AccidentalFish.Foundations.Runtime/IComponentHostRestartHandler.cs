@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Runtime
+namespace AccidentalFish.Foundations.Runtime
 {
     /// <summary>
     /// Implementations of this interface handle the restart of components running in the component host when they error.

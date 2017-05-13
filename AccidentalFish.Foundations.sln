@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Runtime.HostableComponents", "Source\AccidentalFish.Foundations.Runtime.HostableComponents\AccidentalFish.Foundations.Runtime.HostableComponents.csproj", "{163E53E1-1B17-4F0B-934A-7675E40EA20D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Foundations.Resources.Azure", "Source\AccidentalFish.Foundations.Resources.Azure\AccidentalFish.Foundations.Resources.Azure.csproj", "{FAD037A1-342A-46B3-A283-F2A913C19AF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{163E53E1-1B17-4F0B-934A-7675E40EA20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{163E53E1-1B17-4F0B-934A-7675E40EA20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{163E53E1-1B17-4F0B-934A-7675E40EA20D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD037A1-342A-46B3-A283-F2A913C19AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD037A1-342A-46B3-A283-F2A913C19AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD037A1-342A-46B3-A283-F2A913C19AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD037A1-342A-46B3-A283-F2A913C19AF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

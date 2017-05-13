@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Repository
+namespace AccidentalFish.Foundations.Resources.Abstractions.Repository
 {
     /// <summary>
     /// An asynchronous unit of work pattern implementation

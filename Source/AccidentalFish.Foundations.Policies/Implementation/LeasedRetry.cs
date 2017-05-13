@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
+using AccidentalFish.ApplicationSupport.Policies;
 using Microsoft.Extensions.Logging;
 
-namespace AccidentalFish.ApplicationSupport.Policies.Implementation
+namespace AccidentalFish.Foundations.Policies.Implementation
 {
     internal class LeasedRetry : ILeasedRetry
     {

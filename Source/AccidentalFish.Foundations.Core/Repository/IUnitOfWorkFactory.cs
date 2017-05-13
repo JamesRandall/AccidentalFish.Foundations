@@ -1,4 +1,4 @@
-﻿namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Repository
+﻿namespace AccidentalFish.Foundations.Resources.Abstractions.Repository
 {
     /// <summary>
     /// Creates unit of work implementations

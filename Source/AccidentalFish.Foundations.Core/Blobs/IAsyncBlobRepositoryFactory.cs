@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Blobs
+namespace AccidentalFish.Foundations.Resources.Abstractions.Blobs
 {
     /// <summary>
     /// Factory for creating a blob repository

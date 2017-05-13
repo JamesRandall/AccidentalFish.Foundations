@@ -1,6 +1,6 @@
-﻿using AccidentalFish.ApplicationSupport.Resources.Abstractions.Blobs;
+﻿using AccidentalFish.Foundations.Resources.Abstractions.Blobs;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     /// <summary>
     /// Factory for creating large message queues. Large message queues are not limited to the size constraints of Azure service bus and storage queues

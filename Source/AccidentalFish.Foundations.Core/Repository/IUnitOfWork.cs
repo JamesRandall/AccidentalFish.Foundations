@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Repository
+namespace AccidentalFish.Foundations.Resources.Abstractions.Repository
 {
     /// <summary>
     /// Unit of work pattern for use with an ORM

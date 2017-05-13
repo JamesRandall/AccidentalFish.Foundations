@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Runtime
+namespace AccidentalFish.Foundations.Runtime
 {
     /// <summary>
     /// Provides a component host configuration.

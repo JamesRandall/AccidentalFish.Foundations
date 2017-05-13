@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Runtime
+namespace AccidentalFish.Foundations.Runtime
 {
     /// <summary>
     /// Describes the configuration of a component in the component host

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using AccidentalFish.ApplicationSupport.Resources.Abstractions.Blobs;
-using AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues.Model;
+using AccidentalFish.Foundations.Resources.Abstractions.Blobs;
+using AccidentalFish.Foundations.Resources.Abstractions.Queues.Model;
 using Microsoft.Extensions.Logging;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues.Implementation
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues.Implementation
 {
     internal class LargeMessageQueue<T> : ILargeMessageQueue<T> where T : class
     {

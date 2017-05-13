@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues
 {
     // TODO: We need to break this out into a simple base interface and then one with extensions to deal
     // with differences between queue types but still have a single common root interface with basic

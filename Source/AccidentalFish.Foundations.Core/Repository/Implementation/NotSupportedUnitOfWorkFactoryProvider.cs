@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Repository.Implementation
+namespace AccidentalFish.Foundations.Resources.Abstractions.Repository.Implementation
 {
     /// <summary>
     /// Simply throws an exception if called. The desired repository pattern provider

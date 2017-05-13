@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues.Model
+namespace AccidentalFish.Foundations.Resources.Abstractions.Queues.Model
 {
     /// <summary>
     /// Represents a large message on a queue providing access to the underlying queue item and through that the blob

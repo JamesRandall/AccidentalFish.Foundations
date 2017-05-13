@@ -2,10 +2,10 @@
 using System.Threading;
 using System.Threading.Tasks;
 using AccidentalFish.ApplicationSupport.Policies;
-using AccidentalFish.ApplicationSupport.Resources.Abstractions.Queues;
+using AccidentalFish.Foundations.Resources.Abstractions.Queues;
 using Microsoft.Extensions.Logging;
 
-namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProcesses
+namespace AccidentalFish.Foundations.Resources.Abstractions.BackoffProcesses
 {
     /// <summary>
     /// Base hostable component for processing items on a queue falling away into a backoff pattern when no queue items are available.
@@ -13,12 +13,12 @@ namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProces
     /// and the queue to the constructor.
     /// </summary>
     /// <typeparam name="T">The type of the queue item</typeparam>
-    public abstract class BackoffQueueProcessor<T> where T : class
+    public abstract class AbstractBackoffQueueProcessor<T> where T : class
     {
         private readonly Func<Exception, Task<bool>> _dequeErrorHandler;
         private readonly IAsyncBackoffPolicy _backoffPolicy;
         private readonly IAsyncQueue<T> _queue;
-        private readonly ILogger<BackoffQueueProcessor<T>> _logger;
+        private readonly ILogger<AbstractBackoffQueueProcessor<T>> _logger;
 
         private class ProcessResult
         {
@@ -33,7 +33,7 @@ namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProces
         /// <param name="backoffPolicy">The back off policy to use.</param>
         /// <param name="queue">The queue to be processed</param>
         /// <param name="dequeErrorHandler">Optional error handler for dequeue failures. This can return true / false or throw an exception</param>
-        protected BackoffQueueProcessor(
+        protected AbstractBackoffQueueProcessor(
             IAsyncBackoffPolicy backoffPolicy,
             IAsyncQueue<T> queue,
             Func<Exception, Task<bool>> dequeErrorHandler=null) : this(backoffPolicy, queue, null, dequeErrorHandler)
@@ -48,10 +48,10 @@ namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProces
         /// <param name="queue">The queue to be processed</param>
         /// <param name="logger">The logger to use for reporting issues</param>
         /// <param name="dequeErrorHandler">Optional error handler for dequeue failures. This can return true / false or throw an exception</param>
-        protected BackoffQueueProcessor(
+        protected AbstractBackoffQueueProcessor(
             IAsyncBackoffPolicy backoffPolicy,
             IAsyncQueue<T> queue,
-            ILogger<BackoffQueueProcessor<T>> logger,
+            ILogger<AbstractBackoffQueueProcessor<T>> logger,
             Func<Exception, Task<bool>> dequeErrorHandler = null)
         {
             _backoffPolicy = backoffPolicy;
@@ -84,9 +84,9 @@ namespace AccidentalFish.ApplicationSupport.Resources.Abstractions.BackoffProces
         /// <returns>An awaitable task</returns>
         public async Task StartAsync(CancellationToken token)
         {
-            Logger?.LogTrace("Starting BackoffQueueProcessor for type {TYPE}", typeof(T).FullName);
+            Logger?.LogTrace("Starting AbstractBackoffQueueProcessor for type {TYPE}", typeof(T).FullName);
             await _backoffPolicy.ExecuteAsync(AttemptDequeueAsync, token);
-            Logger?.LogTrace("Exiting BackoffQueueProcessor for type {TYPE}", typeof(T).FullName);
+            Logger?.LogTrace("Exiting AbstractBackoffQueueProcessor for type {TYPE}", typeof(T).FullName);
         }
 
         private async Task<bool> AttemptDequeueAsync()
