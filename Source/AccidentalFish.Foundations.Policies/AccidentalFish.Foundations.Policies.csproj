@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <Authors>James Randall</Authors>
+    <Company>Accidental Fish Ltd.</Company>
+    <Product>Accidental Fish Foundations</Product>
+    <Description>Policy and pattern abstractions for applications and services</Description>
+    <Copyright>Copyright 2017 Accidental Fish Ltd.</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/JamesRandall/AccidentalFish.Foundations/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/JamesRandall/AccidentalFish.Foundations</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JamesRandall/AccidentalFish.Foundations.git</RepositoryUrl>
+    <PackageId>AccidentalFish.Foundations.Policies</PackageId>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
