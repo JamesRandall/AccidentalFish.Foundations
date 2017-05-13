@@ -12,7 +12,13 @@ if (Test-Path -Path nuget-cmdline)
 {
 	rmdir nuget-cmdline -Recurse
 }
-rm *.nupkg
+
+rm .\Source\AccidentalFish.Foundations.Policies\bin\debug\*.nupkg
+rm .\Source\AccidentalFish.Foundations.Resources.Abstractions\bin\debug\*.nupkg
+rm .\Source\AccidentalFish.Foundations.Resources.Azure\bin\debug\*.nupkg
+rm .\Source\AccidentalFish.Foundations.Runtime\bin\debug\*.nupkg
+rm .\Source\AccidentalFish.Foundations.Runtime.HostableComponents\bin\debug\*.nupkg
+rm .\Source\AccidentalFish.Foundations.Threading\bin\debug\*.nupkg
 
 msbuild
 
