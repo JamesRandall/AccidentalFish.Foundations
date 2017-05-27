@@ -13,7 +13,7 @@ namespace AccidentalFish.Foundations.Resources.Azure.Blobs
             return blobRepository.Container.GetSharedAccessSignature(policy);
         }
 
-        public static CloudBlobContainer Container(this IAsyncBlockBlobRepository repository)
+        public static CloudBlobContainer GetContainer(this IAsyncBlockBlobRepository repository)
         {
             AsyncBlockBlobRepository blobRepository = (AsyncBlockBlobRepository)repository;
             return blobRepository.Container;

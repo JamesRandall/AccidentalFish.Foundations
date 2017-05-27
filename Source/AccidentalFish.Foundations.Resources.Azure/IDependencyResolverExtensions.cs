@@ -3,6 +3,7 @@ using AccidentalFish.DependencyResolver;
 using AccidentalFish.Foundations.Resources.Abstractions.Blobs;
 using AccidentalFish.Foundations.Resources.Abstractions.Queues;
 using AccidentalFish.Foundations.Resources.Azure.Blobs.Implementation;
+using AccidentalFish.Foundations.Resources.Azure.Implementation;
 using AccidentalFish.Foundations.Resources.Azure.Policies;
 using AccidentalFish.Foundations.Resources.Azure.Queues;
 using AccidentalFish.Foundations.Resources.Azure.Queues.Implementation;
@@ -14,8 +15,18 @@ namespace AccidentalFish.Foundations.Resources.Azure
     // ReSharper disable once InconsistentNaming
     public static class IDependencyResolverExtensions
     {
-        public static IDependencyResolver UseAzureResources(this IDependencyResolver resolver)
+        /// <summary>
+        /// Configures usage of Azure resources
+        /// </summary>
+        /// <param name="resolver">Dependency resolver</param>
+        /// <param name="createIfNoExists">True if factories should attempt to create underyling resource providers</param>
+        /// <returns></returns>
+        public static IDependencyResolver UseAzureResources(this IDependencyResolver resolver, bool createIfNoExists=false)
         {
+            // settings
+            IAzureSettings azureSettings = new AzureSettings(createIfNoExists);
+            resolver.RegisterInstance(azureSettings);
+
             // blobs
             resolver.Register<IAsyncBlobRepositoryFactory, AsyncBlobRepositoryFactory>();
             resolver.Register<IBlobRepositoryFactory, BlobRepositoryFactory>();

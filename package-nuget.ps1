@@ -34,12 +34,12 @@ if ($pushLocal)
 
 if ($pushNuget)
 {
-	dotnet nuget push .\Source\AccidentalFish.Foundations.Policies\bin\debug\*.nupkg --source nuget.org
-	dotnet nuget push .\Source\AccidentalFish.Foundations.Resources.Abstractions\bin\debug\*.nupkg --source nuget.org
+	#dotnet nuget push .\Source\AccidentalFish.Foundations.Policies\bin\debug\*.nupkg --source nuget.org
+	#dotnet nuget push .\Source\AccidentalFish.Foundations.Resources.Abstractions\bin\debug\*.nupkg --source nuget.org
 	dotnet nuget push .\Source\AccidentalFish.Foundations.Resources.Azure\bin\debug\*.nupkg --source nuget.org
-	dotnet nuget push .\Source\AccidentalFish.Foundations.Runtime\bin\debug\*.nupkg --source nuget.org
-	dotnet nuget push .\Source\AccidentalFish.Foundations.Runtime.HostableComponents\bin\debug\*.nupkg --source nuget.org
-	dotnet nuget push .\Source\AccidentalFish.Foundations.Threading\bin\debug\*.nupkg --source nuget.org
+	#dotnet nuget push .\Source\AccidentalFish.Foundations.Runtime\bin\debug\*.nupkg --source nuget.org
+	#dotnet nuget push .\Source\AccidentalFish.Foundations.Runtime.HostableComponents\bin\debug\*.nupkg --source nuget.org
+	#dotnet nuget push .\Source\AccidentalFish.Foundations.Threading\bin\debug\*.nupkg --source nuget.org
 }
 
 if ($cleanup)
