@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.4
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Resources.Abstractions", "Source\AccidentalFish.Foundations.Resources.Abstractions\AccidentalFish.Foundations.Resources.Abstractions.csproj", "{1018D578-3E3E-40BC-AEA1-20D76985BAEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Foundations.Resources.Abstractions", "Source\AccidentalFish.Foundations.Resources.Abstractions\AccidentalFish.Foundations.Resources.Abstractions.csproj", "{1018D578-3E3E-40BC-AEA1-20D76985BAEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Policies", "Source\AccidentalFish.Foundations.Policies\AccidentalFish.Foundations.Policies.csproj", "{505AFD05-906F-476C-B93E-4FF5D48B8D33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Foundations.Policies", "Source\AccidentalFish.Foundations.Policies\AccidentalFish.Foundations.Policies.csproj", "{505AFD05-906F-476C-B93E-4FF5D48B8D33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Threading", "Source\AccidentalFish.Foundations.Threading\AccidentalFish.Foundations.Threading.csproj", "{42813381-1C4F-4988-8802-8399D92335FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Foundations.Threading", "Source\AccidentalFish.Foundations.Threading\AccidentalFish.Foundations.Threading.csproj", "{42813381-1C4F-4988-8802-8399D92335FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Runtime", "Source\AccidentalFish.Foundations.Runtime\AccidentalFish.Foundations.Runtime.csproj", "{1CF9CD2B-3635-4380-AF98-94FC8E81B5A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Foundations.Runtime", "Source\AccidentalFish.Foundations.Runtime\AccidentalFish.Foundations.Runtime.csproj", "{1CF9CD2B-3635-4380-AF98-94FC8E81B5A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Runtime.HostableComponents", "Source\AccidentalFish.Foundations.Runtime.HostableComponents\AccidentalFish.Foundations.Runtime.HostableComponents.csproj", "{163E53E1-1B17-4F0B-934A-7675E40EA20D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Foundations.Runtime.HostableComponents", "Source\AccidentalFish.Foundations.Runtime.HostableComponents\AccidentalFish.Foundations.Runtime.HostableComponents.csproj", "{163E53E1-1B17-4F0B-934A-7675E40EA20D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Foundations.Resources.Azure", "Source\AccidentalFish.Foundations.Resources.Azure\AccidentalFish.Foundations.Resources.Azure.csproj", "{FAD037A1-342A-46B3-A283-F2A913C19AF5}"
 EndProject
@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packaging", "Packaging", "{
 	ProjectSection(SolutionItems) = preProject
 		package-nuget.ps1 = package-nuget.ps1
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccidentalFish.Foundations.Resources.Sql", "Source\AccidentalFish.Foundations.Resources.Sql\AccidentalFish.Foundations.Resources.Sql.csproj", "{C8AFA361-7061-426E-8D7A-8CCAC8F18888}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{FAD037A1-342A-46B3-A283-F2A913C19AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAD037A1-342A-46B3-A283-F2A913C19AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAD037A1-342A-46B3-A283-F2A913C19AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8AFA361-7061-426E-8D7A-8CCAC8F18888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8AFA361-7061-426E-8D7A-8CCAC8F18888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8AFA361-7061-426E-8D7A-8CCAC8F18888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8AFA361-7061-426E-8D7A-8CCAC8F18888}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -16,6 +16,7 @@ if (Test-Path -Path nuget-cmdline)
 rm .\Source\AccidentalFish.Foundations.Policies\bin\debug\*.nupkg
 rm .\Source\AccidentalFish.Foundations.Resources.Abstractions\bin\debug\*.nupkg
 rm .\Source\AccidentalFish.Foundations.Resources.Azure\bin\debug\*.nupkg
+rm .\Source\AccidentalFish.Foundations.Resources.Sql\bin\debug\*.nupkg
 rm .\Source\AccidentalFish.Foundations.Runtime\bin\debug\*.nupkg
 rm .\Source\AccidentalFish.Foundations.Runtime.HostableComponents\bin\debug\*.nupkg
 rm .\Source\AccidentalFish.Foundations.Threading\bin\debug\*.nupkg
@@ -27,6 +28,7 @@ if ($pushLocal)
 	cp .\Source\AccidentalFish.Foundations.Policies\bin\debug\*.nupkg \MicroserviceAnalyticPackageRepository
 	cp .\Source\AccidentalFish.Foundations.Resources.Abstractions\bin\debug\*.nupkg \MicroserviceAnalyticPackageRepository
 	cp .\Source\AccidentalFish.Foundations.Resources.Azure\bin\debug\*.nupkg \MicroserviceAnalyticPackageRepository
+	cp .\Source\AccidentalFish.Foundations.Resources.Sql\bin\debug\*.nupkg \MicroserviceAnalyticPackageRepository
 	cp .\Source\AccidentalFish.Foundations.Runtime\bin\debug\*.nupkg \MicroserviceAnalyticPackageRepository
 	cp .\Source\AccidentalFish.Foundations.Runtime.HostableComponents\bin\debug\*.nupkg \MicroserviceAnalyticPackageRepository
 	cp .\Source\AccidentalFish.Foundations.Threading\bin\debug\*.nupkg \MicroserviceAnalyticPackageRepository
@@ -34,12 +36,13 @@ if ($pushLocal)
 
 if ($pushNuget)
 {
-	#dotnet nuget push .\Source\AccidentalFish.Foundations.Policies\bin\debug\*.nupkg --source nuget.org
-	#dotnet nuget push .\Source\AccidentalFish.Foundations.Resources.Abstractions\bin\debug\*.nupkg --source nuget.org
+	dotnet nuget push .\Source\AccidentalFish.Foundations.Policies\bin\debug\*.nupkg --source nuget.org
+	dotnet nuget push .\Source\AccidentalFish.Foundations.Resources.Abstractions\bin\debug\*.nupkg --source nuget.org
 	dotnet nuget push .\Source\AccidentalFish.Foundations.Resources.Azure\bin\debug\*.nupkg --source nuget.org
-	#dotnet nuget push .\Source\AccidentalFish.Foundations.Runtime\bin\debug\*.nupkg --source nuget.org
-	#dotnet nuget push .\Source\AccidentalFish.Foundations.Runtime.HostableComponents\bin\debug\*.nupkg --source nuget.org
-	#dotnet nuget push .\Source\AccidentalFish.Foundations.Threading\bin\debug\*.nupkg --source nuget.org
+	dotnet nuget push .\Source\AccidentalFish.Foundations.Resources.Sql\bin\debug\*.nupkg --source nuget.org
+	dotnet nuget push .\Source\AccidentalFish.Foundations.Runtime\bin\debug\*.nupkg --source nuget.org
+	dotnet nuget push .\Source\AccidentalFish.Foundations.Runtime.HostableComponents\bin\debug\*.nupkg --source nuget.org
+	dotnet nuget push .\Source\AccidentalFish.Foundations.Threading\bin\debug\*.nupkg --source nuget.org
 }
 
 if ($cleanup)

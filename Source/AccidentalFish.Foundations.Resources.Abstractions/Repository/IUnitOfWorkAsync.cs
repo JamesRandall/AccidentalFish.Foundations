@@ -13,7 +13,7 @@ namespace AccidentalFish.Foundations.Resources.Abstractions.Repository
         /// </summary>
         /// <typeparam name="T">The type of the entities represented by the repository</typeparam>
         /// <returns>A repository</returns>
-        IRepositoryAsync<T> GetRepository<T>() where T : class;
+        IRepository<T> GetRepository<T>() where T : class;
         /// <summary>
         /// Save the changes made within the unit of work
         /// </summary>
