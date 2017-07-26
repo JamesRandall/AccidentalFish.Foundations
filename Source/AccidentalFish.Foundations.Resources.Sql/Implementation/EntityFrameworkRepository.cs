@@ -32,11 +32,12 @@ namespace AccidentalFish.Foundations.Resources.Sql.Implementation
         {
             _dbContext.Set<T>().Add(entity);
         }
-
         
         public void Update(T entity)
         {
             _dbContext.Entry(entity).State = EntityState.Modified;
         }
+
+        internal DbContext DbContext => _dbContext;
     }
 }
