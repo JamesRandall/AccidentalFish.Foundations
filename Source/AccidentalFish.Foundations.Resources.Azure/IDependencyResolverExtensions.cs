@@ -1,8 +1,11 @@
-﻿using AccidentalFish.ApplicationSupport.Policies;
+﻿using System;
+using AccidentalFish.ApplicationSupport.Policies;
 using AccidentalFish.DependencyResolver;
 using AccidentalFish.Foundations.Resources.Abstractions.Blobs;
 using AccidentalFish.Foundations.Resources.Abstractions.Queues;
 using AccidentalFish.Foundations.Resources.Azure.Blobs.Implementation;
+using AccidentalFish.Foundations.Resources.Azure.EventHubs;
+using AccidentalFish.Foundations.Resources.Azure.EventHubs.Implementation;
 using AccidentalFish.Foundations.Resources.Azure.Implementation;
 using AccidentalFish.Foundations.Resources.Azure.Policies;
 using AccidentalFish.Foundations.Resources.Azure.Queues;
@@ -20,8 +23,9 @@ namespace AccidentalFish.Foundations.Resources.Azure
         /// </summary>
         /// <param name="resolver">Dependency resolver</param>
         /// <param name="createIfNoExists">True if factories should attempt to create underyling resource providers</param>
+        /// <param name="eventHubSerializer">If unspecified JSON is used as the event hub serialization format, otherwise this should be a type that implements IEventHubSerializer</param>
         /// <returns></returns>
-        public static IDependencyResolver UseAzureResources(this IDependencyResolver resolver, bool createIfNoExists=false)
+        public static IDependencyResolver UseAzureResources(this IDependencyResolver resolver, bool createIfNoExists=false, Type eventHubSerializer=null)
         {
             // settings
             IAzureSettings azureSettings = new AzureSettings(createIfNoExists);
@@ -47,7 +51,23 @@ namespace AccidentalFish.Foundations.Resources.Azure
             // policies
             resolver.Register<ILeaseManagerFactory, LeaseManagerFactory>();
 
+            // event hubs
+            resolver.Register<IEventHubClientFactory, EventHubClientFactory>();
+            resolver.Register(typeof(IEventHubSerializer), eventHubSerializer ?? typeof(EventHubSerializer));
+
             return resolver;
+        }
+
+        /// <summary>
+        /// Configures usage of Azure resources
+        /// </summary>
+        /// <param name="resolver">Dependency resolver</param>
+        /// <param name="createIfNoExists">True if factories should attempt to create underyling resource providers</param>        
+        /// <returns></returns>
+        public static IDependencyResolver UseAzureResources<TEventHubSerializer>(this IDependencyResolver resolver,
+            bool createIfNoExists = false) where TEventHubSerializer : IEventHubSerializer
+        {
+            return UseAzureResources(resolver, createIfNoExists, typeof(TEventHubSerializer));
         }
     }
 }
